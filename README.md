@@ -10,4 +10,3 @@ This README would normally document whatever steps are necessary to get your app
 
 * Primeiro porque já tenho experiência com esta tecnologia 
 * E o knockoutJS utiliza MVVM que simplifica a construção de interfaces gráficas dinâmicas
-* Com a utilização do MVVM os métodos relativos ao negocio (calculos) são colocados na model, e a viewmodel serve de conexão entre a view e a model
