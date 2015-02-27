@@ -3,10 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Log de Exercícios</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header></header>
-	<div></div>
-	<footer></footer>
+	<header>
+		<span>Desenvolvido com as seguintes ferramentas, linguagens e tecnologias: </span>
+		<a href="http://www.w3.org/TR/html5/" target="_blank"><img src="images/html5.png" alt="html5 logo" class="imgs"></a>
+		<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><img src="images/js2.png" alt="js logo" class="imgs"></a>
+		<a href="http://git-scm.com/" target="_blank"><img src="images/git-icon.png" alt="js logo" class="imgs"></a>
+		<a href="https://bitbucket.org/" target="_blank"><img src="images/bitbucket.png" alt="js logo" class="imgs"></a>
+		<a href="http://knockoutjs.com/" target="_blank"><img src="images/knockoutjs.png" alt="js logo" class="imgs"></a>
+	</header>
+	<div class="container">
+		<h2>Log de Exercícios</h2>
+
+		<form data-bind="submit: AddNewExercise">
+  			<input type="number" data-bind="value: Tempo" placeholder="Tempo (em horas)" class="mask input tempo" />
+			<select data-bind="options: TipoExercicio,value: Tipo,optionsCaption: 'Exercicio...'" class="mask select"></select>
+			<input type="date" data-bind="value: Data" class="mask input">
+	    	<button type="submit" class="mask button">Add</button>
+		</form>
+		<br>
+		<div class="table">
+			<table align="center">
+				<thead>
+					<tr data-bind="foreach: Titulos">
+						<th data-bind="click: $root.OrdenarTabela.bind($root, $data), text: Descricao, attr:{ width: Width }" style="cursor:pointer;"></th>
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: Atividades">
+					<tr>
+						<td data-bind="text: tempo + 'h'"></td>
+						<td data-bind="text: tipo"></td>
+						<td data-bind="text: displaydata"></td>
+						<td><a href="#" data-bind="click: $root.RemoveExercise.bind($root, $data)"><img src="images/remove-icon.png" alt="remover-icon"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<p class="paddingtop">Você já fez <span data-bind="text: TempoTotal"></span> hora<span data-bind="text:(TempoTotal() > 1) ? 's' : ''"></span> de exercícios</p>
+	</div>
+	<footer>
+		<p>2015 - &copy;Samuel Reichert - Email me: samuelreichertt@gmail.com</p>
+	</footer>
+	
+	<script src="js/knockout-3.3.0.js"></script>
+	<script src="js/ViewModelIndex.js"></script>
+	<script type="text/javascript">
+		ko.applyBindings(new ViewModelIndex());
+	</script>
 </body>
 </html>
