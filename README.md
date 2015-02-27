@@ -13,8 +13,8 @@ This README would normally document whatever steps are necessary to get your app
 
 ### CSS ###
 
-* 
+* Fiz todo o CSS "no braço", do zero, e como pode perceber, tenho costume de usar mais class ao invés de id para marcar o HTML que recebe o CSS.
 
 ### Javascript ###
 
-* 
+* Tenho por hábito usar prototype, porque na minha opinião fica mais fácil lidar com algumas variáveis e o código fica mais facil de ser entendido.
