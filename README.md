@@ -10,3 +10,11 @@ This README would normally document whatever steps are necessary to get your app
 
 * Primeiro porque já tenho experiência com esta tecnologia 
 * E o knockoutJS utiliza MVVM que simplifica a construção de interfaces gráficas dinâmicas
+
+### CSS ###
+
+* 
+
+### Javascript ###
+
+* 
