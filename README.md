@@ -18,3 +18,6 @@ This README would normally document whatever steps are necessary to get your app
 ### Javascript ###
 
 * Tenho por hábito usar prototype, porque na minha opinião fica mais fácil lidar com algumas variáveis e o código fica mais facil de ser entendido.
+
+### O que faltou? ###
+* Na minha opinião o que eu poderia ter feito eram os testes javascript, mas eu não faço ideia de como gerar estes testes e como efetuá-los.
